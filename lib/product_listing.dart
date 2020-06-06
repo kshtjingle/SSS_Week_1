@@ -15,9 +15,44 @@ class Listing extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
 
-    return GridView.count(
+    return GridView.builder(
 
-      childAspectRatio: 150 / 178,
+      /*gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: 150/190, crossAxisSpacing: 10.0, mainAxisSpacing: 10.0),
+      padding: EdgeInsets.all(20.0),
+      itemCount: json['products'].length,
+      itemBuilder: (BuildContext context, int index){
+
+        return Card(
+
+          child: Product(jsonString: json['products'][index],),
+
+        );
+
+      },*/
+
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: 150/190, /*crossAxisSpacing: 10.0, mainAxisSpacing: 10.0*/),
+     // padding: EdgeInsets.all(20.0),
+      itemCount: json['products'].length,
+      itemBuilder: (BuildContext context, int index){
+
+        return Container(
+
+          decoration: BoxDecoration(
+
+            border: Border.all(color: Colors.black, width: 0.5)
+
+          ),
+
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Product(jsonString: json['products'][index],),
+            ),
+
+        );
+
+      },
+
+      /*childAspectRatio: 150 / 178,
 
       padding: EdgeInsets.all(20.0),
       crossAxisSpacing: 10.0,
@@ -31,7 +66,7 @@ class Listing extends StatelessWidget{
         Product(jsonString: json,),
         Product(jsonString: json,),
 
-      ],
+      ],*/
 
     );
 
