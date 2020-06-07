@@ -97,6 +97,14 @@ class MyApp extends StatelessWidget{
         appBar: AppBar(
 
           title: Text('Street Style Store'),
+          actions: <Widget>[
+
+            Padding(
+              padding: const EdgeInsets.only(right: 12.0),
+              child: Icon(Icons.shopping_cart, color: Colors.white),
+            )
+
+          ],
 
         ),
 

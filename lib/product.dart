@@ -65,20 +65,33 @@ class Product extends StatelessWidget{
 
             children: <Widget>[
 
-              Image.network(
+              Container(
 
-                jsonString['url'],
+                decoration: BoxDecoration(
 
-                //width: 138.0,
-                height: 115.0,
+                  border: Border.all(
 
-                fit: BoxFit.fitWidth,
-                //width: 200.0,
+                    color: Colors.orange, width: 0.5
 
+                  )
+
+                ),
+
+                child: Image.network(
+
+                  jsonString['url'],
+
+                  //width: 138.0,
+                  height: 115.0,
+
+                  fit: BoxFit.fitWidth,
+                  //width: 200.0,
+
+                ),
               ),
 
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(7.0),
                 child: Row(
 
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,

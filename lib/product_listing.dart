@@ -39,7 +39,7 @@ class Listing extends StatelessWidget{
 
           decoration: BoxDecoration(
 
-            border: Border.all(color: Colors.black, width: 0.5)
+            border: Border.all(color: Colors.pinkAccent, width: 0.5)
 
           ),
 
